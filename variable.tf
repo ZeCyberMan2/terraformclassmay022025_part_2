@@ -14,4 +14,7 @@ variable "firstname"{
   type=string
   default="Marvin"
 }
-
+variable "lastname"{
+  type=string
+  default="Girard"
+}
