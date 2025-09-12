@@ -1,7 +1,11 @@
-output "firstouput"{
+output "firstname"{
 value = var.firstname
 }
-output "Secondouput"{
+output "lastname"{
 value = var.lastname
 }
+output "year arrival"{
+value = var.yeararrival
+}
+
 
