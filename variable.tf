@@ -18,3 +18,7 @@ variable "lastname"{
   type=string
   default="Girard"
 }
+variable "yeararrival"{
+  type=number
+  default=1865
+}
