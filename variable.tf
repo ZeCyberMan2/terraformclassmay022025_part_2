@@ -18,7 +18,7 @@ variable "lastname"{
   type=string
   default="Girard"
 }
-variable "yeararrival"{
+variable "year"{
   type=number
   default=1791
 }
