@@ -25,5 +25,7 @@ value = var.restaurant5
 output "millenium"{
 value = var.millenium
 }
-
+output "truefalse"{
+value = var.truefalse
+}
 
