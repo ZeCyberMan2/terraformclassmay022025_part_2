@@ -7,20 +7,20 @@ value = var.lastname
 output "year"{
 value = var.year
 }
-output "restaurent1"{
-value = var.restaurent1
+output "restaurant1"{
+value = var.restaurant1
 }
-output "restaurent2"{
-value = var.restaurent2
+output "restaurant2"{
+value = var.restaurant2
 }
-output "restaurent3"{
-value = var.restaurent3
+output "restaurant3"{
+value = var.restaurant3
 }
-output "restaurent4"{
-value = var.restaurent4
+output "restaurant4"{
+value = var.restaurant4
 }
-output "restaurent5"{
-value = var.restaurent5
+output "restaurant5"{
+value = var.restaurant5
 }
 
 
