@@ -22,6 +22,8 @@ value = var.restaurant4
 output "restaurant5"{
 value = var.restaurant5
 }
-
+output "millenium"{
+value = var.millenium
+}
 
 
