@@ -42,3 +42,7 @@ variable "restaurant5"{
   type=string
   default="Burger King"
 }
+variable "millenium"{
+  type=number
+  default=2000
+}
