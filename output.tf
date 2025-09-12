@@ -4,7 +4,7 @@ value = var.firstname
 output "lastname"{
 value = var.lastname
 }
-output "yeararrival"{
+output "year"{
 value = var.yeararrival
 }
 
