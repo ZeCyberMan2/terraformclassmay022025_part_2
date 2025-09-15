@@ -31,3 +31,30 @@ value = var.truefalse
 output "listoffruits"{
 value = var.listoffruits
 }
+output "listofmovies"{
+value = var.listofmovies
+}
+output "listoftravel"{
+value = var.listoftravel
+}
+output "listofworkout"{
+value = var.listofworkout
+}
+output "listoffoods"{
+value = var.listoffoods
+}
+output "listofcolors"{
+value = var.listofcolors
+}
+output "listofsongs"{
+value = var.listofsongs
+}
+output "listofemojis"{
+value = var.listofemojis
+}
+output "listofaffirmations"{
+value = var.listofaffirmations
+}
+output "listoficecream"{
+value = var.listoficecream
+}
