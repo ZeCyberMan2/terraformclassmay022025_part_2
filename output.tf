@@ -68,7 +68,7 @@ output "server_name_parts"{
 value = split("-", var.server_name)
 }
 output "top5activities"{
-value = split(",", var.top5activies)
+value = split(",", var.top5activities)
 }
 
 
