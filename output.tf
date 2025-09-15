@@ -58,3 +58,7 @@ value = var.listofaffirmations
 output "listoficecream"{
 value = var.listoficecream
 }
+output "application_name"{
+value = local.full_name
+}
+
