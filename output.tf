@@ -64,5 +64,8 @@ value = local.full_name
 output "csv_items"{
 value = join(",", var.items)
 }
+output "server_name_parts"{
+value = split("-", var.server_name)
+}
 
 
