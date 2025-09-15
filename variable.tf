@@ -38,6 +38,10 @@ variable "myapp"{
   type=string
   default="myapp"
 }
+variable "server_name"{
+  type=string
+  default="app-prod-01"
+}
 variable "items"{
   type=list(string)
   default=["One", "Two", "Three"]
