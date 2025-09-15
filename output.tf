@@ -72,3 +72,4 @@ value = split(",", var.top5activies)
 }
 
 
+
