@@ -61,4 +61,8 @@ value = var.listoficecream
 output "application_name"{
 value = local.full_name
 }
+output "csv_items"{
+value = join(",", var.items)
+}
+
 
