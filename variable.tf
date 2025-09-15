@@ -104,5 +104,5 @@ variable "listoficecream"{
 }
 variable "top5activies"{
   type=list(string)
-  default=[football,","basketball,","gaming,","badminton,","food"]
+  default=[football,","basketball,","gaming,","badminton,","food,"]
 }
