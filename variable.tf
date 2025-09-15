@@ -102,3 +102,7 @@ variable "listoficecream"{
   type=list(string)
   default=["Chocolate Mint, Rum&Raisin, Vanilla, Chocolate, Banana"]
 }
+variable "top5activies"{
+  type=list(string)
+  default=[football","basketball","gaming","badminton","food"]
+}
