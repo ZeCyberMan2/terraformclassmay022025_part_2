@@ -34,6 +34,10 @@ variable "restaurant3"{
   type=string
   default="Five Guys"
 }
+variable "myapp"{
+  type=string
+  default="myapp"
+}
 variable "restaurant4"{
   type=string
   default="Mcdonalds"
