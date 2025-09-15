@@ -70,6 +70,8 @@ value = split("-", var.server_name)
 output "top5activities"{
 value = join(",", var.top5activities)
 }
-
+output "top5activities"{
+value = join(",", var.top5movies)
+}
 
 
