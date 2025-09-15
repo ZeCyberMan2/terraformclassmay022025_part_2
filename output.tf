@@ -68,7 +68,7 @@ output "server_name_parts"{
 value = split("-", var.server_name)
 }
 output "top5activities"{
-value = flatten([for activity in var.top5activities : split(",", activity)])
+value = join(",", var.top5activities)
 }
 
 
