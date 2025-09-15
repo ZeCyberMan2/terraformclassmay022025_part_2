@@ -72,7 +72,7 @@ variable "listoffoods"{
 }
 variable "listofcolors"{
   type=list(string)
-  default=["Yellow, Royal Blue, Magenta, Green Gorest, Red
+  default=["Yellow, Royal Blue, Magenta, Green Gorest, Red"]
 }
 variable "listofsongs"{
   type=list(string)
