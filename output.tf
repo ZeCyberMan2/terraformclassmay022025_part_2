@@ -28,4 +28,6 @@ value = var.millenium
 output "truefalse"{
 value = var.truefalse
 }
-
+output "listoffruits"{
+value = var.listoffruits
+}
