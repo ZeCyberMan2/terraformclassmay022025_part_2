@@ -106,3 +106,7 @@ variable "top5activities"{
   type=list(string)
   default=["football","basketball","gaming","badminton","food"]
 }
+variable "top5movies"{
+  type=string
+  default=["Astro Boy, The Lorax, Lion King, Dragon Ball Super Broly, Demon slayer The Movie: Mugen Train"]
+}
