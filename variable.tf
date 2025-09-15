@@ -54,3 +54,39 @@ variable "listoffruits"{
   type=list(string)
   default=["Green apple, Orange, Strawberry, Grape, Kiwi"]
 }
+variable "listofmovies"{
+  type=list(string)
+  default=["Astro Boy, The Lorax, Lion King, Dragon Ball Super Broly, Demon slayer The Movie: Mugen Train"]
+}
+variable "listoftravel"{
+  type=list(string)
+  default=["Cancun, Paris, Maldives, Tokyo, Hong Kong"]
+}
+variable "listofworkout"{
+  type=list(string)
+  default=["Legs Day, Biceps Day, Chest Day, Traps Day, Lower Back Day"]
+}
+variable "listoffood"{
+  type=list(string)
+  default=["Mac&Cheese, Spaghetti, Hamburger, White Rice, Fried Chicken"]
+}
+variable "listofcolors"{
+  type=list(string)
+  default=["Yellow, Royal Blue, Magenta, Green Gorest, Red
+}
+variable "listofsongs"{
+  type=list(string)
+  default=["Love of my life by Queen, temperature by Sean Paul, Die With a Smile by Lady Gaga and Bruno Mars, snowman by sia, Judas Lady Gaga"]
+}
+variable "listofsongs"{
+  type=list(string)
+  default=["🙂,😔,😶‍🌫️,🫡,😭"]
+}
+variable "listofaffirmations"{
+  type=list(string)
+  default=["Incredible, Amazing, Greatest Of All Time (GOAT), Aura Farming, Radiant "]
+}
+variable "listoficecream"{
+  type=list(string)
+  default=["Chocolate Mint, Rum&Raisin, Vanilla, Chocolate, Banana"]
+}
