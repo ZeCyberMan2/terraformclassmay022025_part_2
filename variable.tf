@@ -38,6 +38,10 @@ variable "myapp"{
   type=string
   default="myapp"
 }
+variable "items"{
+  type=list(string)
+  default=["One", "Two", "Three"]
+}
 variable "restaurant4"{
   type=string
   default="Mcdonalds"
