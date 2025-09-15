@@ -66,7 +66,7 @@ variable "listofworkout"{
   type=list(string)
   default=["Legs Day, Biceps Day, Chest Day, Traps Day, Lower Back Day"]
 }
-variable "listoffood"{
+variable "listoffoods"{
   type=list(string)
   default=["Mac&Cheese, Spaghetti, Hamburger, White Rice, Fried Chicken"]
 }
@@ -78,7 +78,7 @@ variable "listofsongs"{
   type=list(string)
   default=["Love of my life by Queen, temperature by Sean Paul, Die With a Smile by Lady Gaga and Bruno Mars, snowman by sia, Judas Lady Gaga"]
 }
-variable "listofsongs"{
+variable "listofemojis"{
   type=list(string)
   default=["🙂,😔,😶‍🌫️,🫡,😭"]
 }
