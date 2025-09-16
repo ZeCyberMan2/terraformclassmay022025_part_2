@@ -71,7 +71,7 @@ output "top5activities"{
 value = join(",", var.top5activities)
 }
 output "top5movies"{
-value = tolist([var.top5movies])
+value = split(""", var.top5activities)
 }
 
 
