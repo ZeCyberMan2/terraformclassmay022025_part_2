@@ -85,3 +85,6 @@ value = local.replaced
 output "first_word"{
 value = local.first_word # "Inception"
 }
+output "first_word_part2"{
+value = local.first_word_part2 # "Inception"
+}
