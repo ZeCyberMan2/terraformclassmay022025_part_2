@@ -14,3 +14,6 @@ locals {
 locals {
   first_word_part2 = substr(var.phrase2, 0, length(var.phrase2) - 5) # The length - 1 character
 }
+locals {
+  mcitstudents = substr(var.students, 2, length(var.students) - 9) # The length - 1 character
+}
