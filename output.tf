@@ -80,6 +80,6 @@ output "display_upper"{
 value = local.movie_upper
 }
 output "replaced_string"{
-value = local.replace
+value = local.replaced
 }
 
