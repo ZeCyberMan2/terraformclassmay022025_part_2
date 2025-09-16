@@ -126,3 +126,7 @@ variable "phrase2"{
   type=string
   default="InceptionMovie"
 }
+variable "students"{
+  type=string
+  default="mymcitstudents"
+}
