@@ -108,5 +108,5 @@ variable "top5activities"{
 }
 variable "top5movies"{
   type=string
-  default="Astro Boy, The Lorax, Lion King, Dragon Ball Super Broly, Demon slayer The Movie: Mugen Train"
+  default="Astro Boy,The Lorax,Lion King,Dragon Ball Super Broly,Demon slayer The Movie: Mugen Train"
 }
