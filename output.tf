@@ -73,5 +73,8 @@ value = join(",", var.top5activities)
 output "top5movies"{
 value = split(",", var.top5movies)
 }
+output "movie"{
+value = local.movie_name
+}
 
 
