@@ -118,3 +118,7 @@ variable "original"{
   type=string
   default="Hello MCIT World"
 }
+variable "phrase"{
+  type=string
+  default="InceptionMovie"
+}
