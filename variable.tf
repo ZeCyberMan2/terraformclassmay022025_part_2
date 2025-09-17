@@ -130,9 +130,9 @@ variable "students"{
   type=string
   default="mymcitstudents"
 }
-variable "labels"{
-  type=set(string)
-  default=["alpha", "beta", "gamma"]
+variable "labels"{ # Create a variable named labels
+  type=set(string) # Set the variable's type as a string
+  default=["alpha", "beta", "gamma"] # The default content of the variable
 }
 variable "usernames"{
   type=list(string)
