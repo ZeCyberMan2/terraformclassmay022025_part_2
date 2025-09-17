@@ -130,19 +130,4 @@ variable "students"{
   type=string
   default="mymcitstudents"
 }
-variable "labels"{ # Create a variable named labels
-  type=set(string) # Set the variable's type as a string
-  default=["alpha", "beta", "gamma"] # The default content of the variable
-}
-variable "usernames"{ # Create a variable named usernames
-  type=list(string) # Set the variable's type as a string
-  default=["alice", "bob", "carrol"] # The default content of the variable
-}
-variable "domain"{ # Create a variable named domain
-  type=string # Set the variable's type as a string
-  default="example.com" # The default content of the variable
-}
-variable "raw_scores"{ # Create a variable named raw_scores
-  type=list(string) # Set the variable's type as a list where each elements are a string
-  default=["alice:90", "bob:75", "carl:85"] # The default content of the variable
-}
+
