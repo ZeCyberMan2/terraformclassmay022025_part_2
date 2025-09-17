@@ -132,5 +132,13 @@ variable "students"{
 }
 variable "labels"{
   type=set(string)
-  default = ["alpha", "beta", "gamma"]
+  default=["alpha", "beta", "gamma"]
+}
+variable "usernames"{
+  type=list(string)
+  defaul=["alice", "bob", "carrol"]
+}
+variable "domain"{
+  type=string
+  default="example.com"
 }
