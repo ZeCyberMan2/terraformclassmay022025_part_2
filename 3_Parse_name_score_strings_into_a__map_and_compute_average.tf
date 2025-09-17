@@ -10,9 +10,9 @@ locals {
      score = tonumber(split(":", s)[1]) # convert the value to a number
    }
  ]
- scores_map   = { for p in local.score_pairs : p.name => p.score }
- average      = length(local.score_pairs) == 0 ? 0 :
-                sum([for p in local.score_pairs : p.score]) / length(local.score_pairs)
+ scores_map = { for p in local.score_pairs : p.name => p.score }
+ average = length(local.score_pairs) == 0 ? 0 :
+ sum([for p in local.score_pairs : p.score]) / length(local.score_pairs)
 }
 
 
@@ -24,9 +24,11 @@ variable "items" {
  type    = list(string)
  default = ["b", "a", "c", "a", "b"]
 }
+
 locals {
  unique_sorted = sort(distinct(var.items))
  csv           = join(",", local.unique_sorted)
 }
+
 output "unique_sorted" { value = local.unique_sorted }
 output "csv"           { value = local.csv }
