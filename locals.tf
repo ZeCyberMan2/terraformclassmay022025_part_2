@@ -20,3 +20,7 @@ locals {
 locals {
   labels_upper = toset([for s in var.labels : upper(s)])
 }
+locals {
+  emails = {for u in var.usernames : u => "${u}@${var.domain}"}
+}
+
