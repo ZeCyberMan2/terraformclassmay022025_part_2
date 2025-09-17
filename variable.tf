@@ -136,7 +136,7 @@ variable "labels"{
 }
 variable "usernames"{
   type=list(string)
-  defaul=["alice", "bob", "carrol"]
+  default=["alice", "bob", "carrol"]
 }
 variable "domain"{
   type=string
