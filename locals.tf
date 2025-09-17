@@ -17,10 +17,5 @@ locals {
 locals {
   mcitstudents = substr(var.students, 2, length(var.students) - 10) # The length - 1 character
 }
-locals {
-  labels_upper = toset([for s in var.labels : upper(s)])
-}
-locals {
-  emails = {for u in var.usernames : u => "${u}@${var.domain}"}
-}
+
 
