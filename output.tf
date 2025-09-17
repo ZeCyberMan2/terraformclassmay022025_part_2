@@ -91,4 +91,7 @@ value = local.first_word_part2 # "Inception"
 output "MCIT_Students"{
 value = local.mcitstudents 
 }
+output "labels_upper"{
+value = local.labels_upper
+}
 
