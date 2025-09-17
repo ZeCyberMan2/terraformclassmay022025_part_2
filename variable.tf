@@ -132,5 +132,5 @@ variable "students"{
 }
 variable "labels"{
   type=set(string)
-  default=["alpha", "beta", "gamma]
+  default=["alpha", "beta", "gamma"]
 }
