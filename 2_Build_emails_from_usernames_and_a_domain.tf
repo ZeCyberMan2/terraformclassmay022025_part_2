@@ -13,6 +13,6 @@ locals {
 emails = {for u in var.usernames : u => "${u}@${var.domain}"}
 }
 
-output "labels_upper" {
-value=local.labels_upper
+output "emailsr" {
+value=local.emails
 }
