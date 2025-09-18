@@ -11,5 +11,5 @@ output "unique_sorted" {
 value = local.unique_sorted
 }
 output "csv" {
-value = local,csv
+value = local.csv
 }
