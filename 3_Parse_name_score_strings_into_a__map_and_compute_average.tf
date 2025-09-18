@@ -10,12 +10,12 @@ locals {
      score = tonumber(split(":", s)[1]) # convert the value to a number
    }
  ]
- scores_map = { for p in local.score_pairs : p.name => p.score}
- average = length(local.score_pairs) == 0 ? 0 : sum([for p in local.score_pairs : p.score]) / length(local.score_pairs)
+ scores_map = { for p in local.score_pairs : p.name => p.score} #
+ average = length(local.score_pairs) == 0 ? 0 : sum([for p in local.score_pairs : p.score]) / length(local.score_pairs) # 
 }
 
 
- output "scores_map" { value = local.scores_map }
- output "avg_score"  { value = local.average    }
+ output "scores_map" { value = local.scores_map } # output the message "scores_map" and the value of the variable called scores_map
+ output "avg_score"  { value = local.average    } # output the message "avg_score" and the value of the variable called average
 
 
