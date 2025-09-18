@@ -3,6 +3,6 @@ variable "list_of_hello" {
  default = ["alice", "bob", "carol"]
 }
 locals {
-new_list = concat(local.list_of_hello, ["hello"])
+new_list = concat(var.list_of_hello, ["hello"])
 }
 output "group_of_hello" { value = local.list_of_hello }
