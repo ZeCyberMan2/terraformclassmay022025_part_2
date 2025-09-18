@@ -5,4 +5,4 @@ variable "list_of_hello" {
 locals {
 new_list = concat(var.list_of_hello, ["hello"])
 }
-output "group_of_hello" { value = local.list_of_hello }
+output "group_of_hello" { value = var.list_of_hello }
