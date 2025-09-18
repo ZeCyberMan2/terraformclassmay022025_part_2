@@ -3,6 +3,6 @@ variable "list_of_hello" {
  default = ["alice", "bob", "carol"]
 }
 locals {
-new_list = concat(var.list_of_hello, ["hello"])
+new_list = [for name in var.list_of_hello : "hello ${name}"]
 }
-output "group_of_hello" { value = var.list_of_hello }
+output "group_of_hello" { value = local.new_list }
