@@ -4,9 +4,9 @@ variable "hotels" {  #
 }
 
 locals {
-upper_case_Hyatt = upper(var.hotels, 21, 26)
+upper_case_Hyatt = upper(var.hotels[3])
 }
 
 output "Hyatt" {
-value = var.upper_case_Hyatt
+value = local.upper_case_Hyatt
 }
