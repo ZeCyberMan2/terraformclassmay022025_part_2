@@ -4,9 +4,10 @@ variable "foodsv3" {
 }
 
 locals{
-  count = length(var.foodsv3)
+  count = join("", var.foodsv3) 
+  total_characters = length(var.count)
 }
 
 output "counting"{
-  value = local.count
+  value = local.total_characters
 }
