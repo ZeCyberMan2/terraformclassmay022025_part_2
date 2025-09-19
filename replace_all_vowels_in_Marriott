@@ -11,7 +11,7 @@ locals{
                 "e", "*"),
               "i", "*"),
             "o", "*"),
-          "u", "*"),
+          "u", "*")
 }
 
 output "vowels are crazy"{
