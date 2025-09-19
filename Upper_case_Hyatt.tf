@@ -4,7 +4,8 @@ variable "hotels" {  #
 }
 
 locals {
-upper_case_Hyatt = upper(var.hotels[3])
+upper_case_Hyatt = [for hotel in var.hotels : hotel == "Hyatt" ? upper(hotel) : hotel]
+
 }
 
 output "Hyatt" {
