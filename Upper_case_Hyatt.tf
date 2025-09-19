@@ -8,5 +8,5 @@ upper_case_Hyatt = upper(var.hotels, 21, 26)
 }
 
 output{
-value = var.upper_case_hyatt
+value = var.upper_case_Hyatt
 }
