@@ -5,13 +5,14 @@ variable "marriott" {
 
 locals{
   vowels = replace(
-              replace(
-                replace(
-                  replace(var.marriott, "a", "*"),
-                "e", "*"),
-              "i", "*"),
-            "o", "*"),
-          "u", "*"),
+  replace(
+    replace(
+      replace(
+        replace(var.marriott, "a", "*"),
+      "e", "*"),
+    "i", "*"),
+  "o", "*"),
+"u", "*")
 }
 
 output "vowels_are_crazy"{
