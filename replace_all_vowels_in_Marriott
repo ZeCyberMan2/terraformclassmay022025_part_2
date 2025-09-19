@@ -1,0 +1,19 @@
+variable "hotels" {
+  type=string
+  default = "Marriott"
+}
+
+locals{
+  vowels = replace(
+              replace(
+                replace(
+                  replace(var.hotels, "a", "*"),
+                "e", "*"),
+              "i", "*"),
+            "o", "*"),
+          "u", "*"),
+}
+
+output "vowels are crazy"{
+  value = local.vowels
+}
