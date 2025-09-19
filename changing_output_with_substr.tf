@@ -1,6 +1,6 @@
 variable "hotelsv2"{
   type=list(string)
-default:["Hilton", "Marriott", "Sheraton", "Hyatt"]
+default=["Hilton", "Marriott", "Sheraton", "Hyatt"]
 }
 
 locals{
