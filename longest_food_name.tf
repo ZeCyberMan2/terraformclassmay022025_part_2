@@ -10,7 +10,7 @@ sorted_by_length = sort([
     word = word
   }
 ])
-longest = local.storted_by_length[length(local.sorted_by_length) -1].word
+longest = local.sorted_by_length[length(local.sorted_by_length) -1].word
 }
 
 output "Is_this_the_real_life_or_is_this_just_fantasy"{
