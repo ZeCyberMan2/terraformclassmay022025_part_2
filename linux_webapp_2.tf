@@ -1,6 +1,6 @@
 variable "webapp_names" {
  type= list(string)
- default = var.location
+ default = ["app1", "app2", "app3", "app4", "app5"]
 }
 
 resource "azurerm_resource_group" "mcitazurerm"{
