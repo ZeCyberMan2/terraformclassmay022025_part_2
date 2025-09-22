@@ -1,13 +1,9 @@
-provider "azurerm" {
-  features {}
-}
-
 variable"windowscountry"{
   type = list(string)
   default = ["Canada", "China", "Singapour", "Haiti", "Russia"]
 }
 
-resource "azurerm_resource_group" "mcitazurerm"{
+resource "azurerm_resource_group" "windowsazurerm"{
   name= "SeptemberazurermWindows"
   location= "Canada Central"
 }
