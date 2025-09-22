@@ -3,7 +3,7 @@ variable "windowscountry" {
   default = ["Canada", "China", "Singapour", "Haiti", "Russia"]
 }
 
-variable "plan_sku_name" {
+variable "plan_sku_name2" {
   type    = string
   default = "B1"  # You can change to "P1v2", "S1", etc.
 }
@@ -22,7 +22,7 @@ resource "azurerm_service_plan" "windowsplan" {
   resource_group_name = azurerm_resource_group.windowsazurerm.name
   location            = azurerm_resource_group.windowsazurerm.location
   os_type             = "Windows"
-  sku_name            = var.plan_sku_name
+  sku_name            = var.plan_sku_name2
 }
 
 resource "azurerm_windows_web_app" "windowswebapp" {
