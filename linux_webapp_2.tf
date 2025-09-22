@@ -13,7 +13,7 @@ resource "azurerm_service_plan" "mcitsplan" {
   resource_group_name= azurerm_resource_group.mcitazurerm.name
   location= azurerm_resource_group.mcitazurerm.location
   os_type = "Linux"
-  sku_name = var.pan_sku_name
+  sku_name = var.plan_sku_name
 }
 
 resource "azurerm_linux_web_app" "mcitlinuxwebapp"{
