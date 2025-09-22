@@ -1,3 +1,7 @@
+provider "azurerm" {
+  features {}
+}
+
 variable"windowscountry"{
   type = list(string)
   default = ["Canada", "China", "Singapour", "Haiti", "Russia"]
