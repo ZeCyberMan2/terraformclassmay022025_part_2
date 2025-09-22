@@ -8,7 +8,7 @@ resource "azurerm_resource_group" "mcitazurerm"{
   location= "Canada Central"
 }
 
-resource "azureerm_service_plan" "mcitsplan" {
+resource "azurerm_service_plan" "mcitsplan" {
   name= "mcitserviceplan"
   resource_group_name= azurerm_resource_group.mcitazurerm.name
   location= azurerm_resource_group.mcitazureerm.location
