@@ -1,10 +1,4 @@
-provider "azurerm"{
-  features{}  
-    subscription_id=var.subscription_id
-    client_id=var.client_id
-    client_secret=var.client_secret
-    tenant_id=var.tenant_id
-}
+
 variable"windowscountry"{
   type = list(string)
   default = ["Canada", "China", "Singapour", "Haiti", "Russia"]
@@ -20,7 +14,7 @@ resource "windows_service_plan" "windowsplan"{
   resource_group_name= azurerm_resource_group.mcitazurerm.name
   location= azurerm_resource_group.mcitazurerm.location
   os_type="Windows"
-  sku_name="B1"
+  sku_name=var.plan_sku_name
 }
 
 resource "azurerm_windows_web_app" "windowswebapp" {
