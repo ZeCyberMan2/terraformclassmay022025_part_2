@@ -12,8 +12,8 @@ resource "azureerm_service_plan" "mcitsplan" {
   name= "mcitserviceplan"
   resource_group_name= azurerm_resource_group.mcitazurerm.name
   location= azurerm_resource_group.mcitazureerm.location
-  os_type =
-  sku_name = 
+  os_type = "Linux"
+  sku_name = var.pan_sku_name
 }
 
 resource "azurerm_linuxweb_app" "mcitlinuxwebapp"{
