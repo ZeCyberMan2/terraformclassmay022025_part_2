@@ -11,12 +11,12 @@ resource "azurerm_resource_group" "mcitazurerm"{
 resource "azurerm_service_plan" "mcitsplan" {
   name= "mcitserviceplan"
   resource_group_name= azurerm_resource_group.mcitazurerm.name
-  location= azurerm_resource_group.mcitazureerm.location
+  location= azurerm_resource_group.mcitazurerm.location
   os_type = "Linux"
   sku_name = var.pan_sku_name
 }
 
-resource "azurerm_linuxweb_app" "mcitlinuxwebapp"{
+resource "azurerm_linux_web_app" "mcitlinuxwebapp"{
   for_each= toset(var.webapp_names)
   name= each.key
   resource_group_name= azurerm_resource_group.mcitazurerm.name
