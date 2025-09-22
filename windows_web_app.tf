@@ -8,10 +8,6 @@ variable "plan_sku_name2" {
   default = "B1"  # You can change to "P1v2", "S1", etc.
 }
 
-provider "azurerm" {
-  features {}
-}
-
 resource "azurerm_resource_group" "windowsazurerm" {
   name     = "SeptemberazurermWindows"
   location = "Canada Central"
