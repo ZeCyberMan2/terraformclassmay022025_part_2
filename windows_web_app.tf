@@ -70,7 +70,7 @@ variable "os_type2" {
 
 locals {
   windowscountry = {
-    "wa-${var.country1}-${local.windowscountry}" = {
+    "wa-${var.country1}-${var.country1}" = {
       country = var.country1
       activity1 = var.activiti1
       activity2 = var.activiti2
