@@ -93,7 +93,7 @@ resource "azurerm_service_plan" "windowsplan" {
 }
 
 resource "azurerm_windows_web_app" "windowswebapp" {
-  for_each = loca.windowscountry
+  for_each = local.windowscountry
   name= each.key
   resource_group_name= azurerm_resource_group.windowsazurerm.name
   location= azurerm_resource_group.windowsazurerm.location
