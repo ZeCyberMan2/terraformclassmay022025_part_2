@@ -69,21 +69,22 @@ variable "os_type2" {
 
 
 locals {
-  windowscountry = {
-    "wa-${var.country1}-${var.country1}" = {
-      country = var.country1
-      activity1 = var.activiti1
-      activity2 = var.activiti2
-      activity3 = var.activiti3
-      activity4 = var.activiti4
-      activity5 = var.activiti5
-      activity6 = var.activiti6
-      activity7 = var.activiti7
-      activity8 = var.activiti8
-      activity9 = var.activiti9
-      activity10 = var.activiti10
-    }
+   all_variables = {
+      country1     = var.country1
+      activiti1    = var.activiti1
+      activiti2    = var.activiti2
+      activiti3    = var.activiti3
+      activiti4    = var.activiti4
+      activiti5    = var.activiti5
+      activiti6    = var.activiti6
+      activiti7    = var.activiti7
+      activiti8    = var.activiti8
+      activiti9    = var.activiti9
+      activiti10   = var.activiti10
   }
+
+  windowscountry = {
+    "wa-${var.country1}-${local.all_variables}" 
 }
 
 
