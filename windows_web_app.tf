@@ -69,22 +69,23 @@ variable "os_type2" {
 
 
 locals {
-   all_variables = {
-      country1     = var.country1
-      activiti1    = var.activiti1
-      activiti2    = var.activiti2
-      activiti3    = var.activiti3
-      activiti4    = var.activiti4
-      activiti5    = var.activiti5
-      activiti6    = var.activiti6
-      activiti7    = var.activiti7
-      activiti8    = var.activiti8
-      activiti9    = var.activiti9
-      activiti10   = var.activiti10
-  }
+   all_variables = [
+    var.activiti1,
+    var.activiti2,
+    var.activiti3,
+    var.activiti4,
+    var.activiti5,
+    var.activiti6,
+    var.activiti7,
+    var.activiti8,
+    var.activiti9,
+    var.activiti10,
+  ]
 
   windowscountry = {
-    "wa-${var.country1}-${local.all_variables}" 
+    for activity in local.all_variables : "wa-${var.country1}-${activity}"  => {
+      country  = var.country1
+      activity = activity
 }
 
 
