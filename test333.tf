@@ -41,7 +41,7 @@ locals {
 #################################
 # Windows Web Apps (One per item)
 #################################
-resource "azurerm_windows_web_app" "us_apps" {
+resource "azurerm_windows_web_app" "us_apps2" {
   for_each            = local.canada_items2_map
 
   name                = "wa-canada-${each.key}"
