@@ -63,3 +63,12 @@ resource "azurerm_windows_web_app" "us_apps" {
     os          = "windows"
   }
 }
+
+# Output: List of app names
+output "windows_web_app_names" {
+  description = "Deployed Windows web app names"
+  value = [
+    for app in azurerm_windows_web_app.us_apps :
+    app.name
+  ]
+}
