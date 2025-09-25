@@ -11,7 +11,7 @@ variable "canada_items2" {
 }
 
 #################################
-# Resource Group (FIXED)
+# Resource Group 
 #################################
 resource "azurerm_resource_group" "canada_us_rg" {
   name     = "canada-us-items-rg"
@@ -19,7 +19,7 @@ resource "azurerm_resource_group" "canada_us_rg" {
 }
 
 #################################
-# Windows Service Plan (FIXED)
+# Windows Service Plan 
 #################################
 resource "azurerm_service_plan" "windows_plan2" {
   name                = "mcit-windows-serviceplan"
