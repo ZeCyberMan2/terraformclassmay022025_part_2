@@ -1,3 +1,8 @@
+variable "ssh_public_key" {
+  type = string
+  default="AAAAB3NzaC1yc2EAAAADAQABAAACAQCq6Liwu/rATm2xYEK/OLWFr0BWvvOcgyuH+ncRuGZroRNQF+9V8t2pBFhq1EdV8zt0ime8IuRlXGhsus3kLJjE5MtFVlVAxHxmOYu+db7/a0v+Rm6/l1CatZQgAJXPcVNIC2s6SWOD10rCKhKlfRGMA/CbkpJTRY42yyOt7SwoaAI7NqeE4zlGl/dQ7etnsGGn05D7kIWLzVEvQpWFCcQ7/s7Z61Ht9UgjUETyEL4ygUqOoM9g7e2B4KKJY62NAuCj0uRb4KORlrAxR9DmIl/GnlFQuDK3Jhcjx93OkT6D+2lHubXTDjOE7MlEQAPFvkoxCjevmJIyEiDSAffwn6MbW3rgnGNN25ZgtXBx/3sfoPGFX8S0+5vyFdrS1WGm8dgM2ZsbGa1VXYwjswI50EW/b3mbBx40SPh7O4EXyn7lndIEUx45yY/zBD3cRv7VakMBPfX6jDhi9x6oOfE5up9SmCiw6obGSxzUSz4x4xRr1bCw7D2VSFSHX/3JprE8FSF5JIIIlPWO+Ehi6PG0sJofJRvreKms7JYh0YzcHBUXhPoCJIMEZK3I1x4dOdDE+59YFvC/W0tqCm8p2AEejPK+LjoA9gsc8PDWBTQlrmsyjzTO9LkRyC8q6zGORTqNajQ+EO8j0JGOoAecna8idBy5REYnab9A7GIUxPm2hyj3ZQ== marvi@DESKTOP-PLACC03"
+}
+
 resource "azurerm_resource_group" "linuxvm" {
   name     = "linux-virtual-machine"
   location = "Canada East"
@@ -42,7 +47,7 @@ resource "azurerm_linux_virtual_machine" "linux1" {
 
   admin_ssh_key {
     username   = "adminuser"
-    public_key = file("C:/Users/marvi/.ssh/id_rsa.pub")
+    public_key = var.ssh_public_key
   }
 
   os_disk {
