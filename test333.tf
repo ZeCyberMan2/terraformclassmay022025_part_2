@@ -65,10 +65,7 @@ resource "azurerm_windows_web_app" "us_apps2" {
 }
 
 # Output: List of app names
-output "windows_web_app_names" {
+output "canada_items3" {
   description = "Deployed Windows web app names"
-  value = [
-    for app in azurerm_windows_web_app.us_apps :
-    app.name
-  ]
+  value = canada_items2_map
 }
