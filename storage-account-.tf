@@ -1,3 +1,20 @@
+variable "storage"{
+  type= map(string)
+  default= {
+    "storage1" = "storage1"
+    "storage2" = "storage2"
+    "storage3" = "storage3"
+    "storage4" = "storage4"
+    "storage5" = "storage5"
+  }
+}
+
+locals {
+  storage_accounts=var.storage
+}
+
+
+
 resource "azurerm_resource_group" "account" {
   name     = "account-resources"
   location = "Canada Central"
@@ -15,18 +32,9 @@ resource "azurerm_storage_account" "storage-account" {
   }
 }
 
-locals {
-  storage_account_name = [
-    "storage1",
-    "storage2",
-    "storage3",
-    "storage4",
-    "storage5"
-  ]
-}
 
 resource "azurerm_storage_account" "storages" {
-  for_each= toset(local.storage_account_name)
+  for_each= toset(local.storage_accounts)
   name= each.value
   resource_group_name= azurerm_resource_group.account.name
   location= azurerm_resource_group.account.location
