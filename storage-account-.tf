@@ -34,7 +34,7 @@ resource "azurerm_storage_account" "storage-account" {
 
 
 resource "azurerm_storage_account" "storages" {
-  for_each= toset(local.storage_accounts)
+  for_each= local.storage_accounts
   name= each.value
   resource_group_name= azurerm_resource_group.account.name
   location= azurerm_resource_group.account.location
