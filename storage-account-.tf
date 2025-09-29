@@ -25,7 +25,7 @@ locals {
   ]
 }
 
-resource "azurerm_storage_account" "" {
+resource "azurerm_storage_account" "storages" {
   for_each           = toset(local.storage_account_name)
   name               = each.value
   resource_group_name = azurerm_resource_group.account.name
