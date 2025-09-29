@@ -4,7 +4,7 @@ resource "azurerm_resource_group" "account" {
 }
 
 resource "azurerm_storage_account" "storage-account" {
-  name                     = "storage-account"
+  name                     = "storageaccount"
   resource_group_name      = azurerm_resource_group.account.name
   location                 = azurerm_resource_group.account.location
   account_tier             = "Standard"
@@ -26,9 +26,10 @@ locals {
 }
 
 resource "azurerm_storage_account" "storages" {
-  for_each           = toset(local.storage_account_name)
-  name               = each.value
-  resource_group_name = azurerm_resource_group.account.name
-  location           = azurerm_resource_group.account.location
-
+  for_each= toset(local.storage_account_name)
+  name= each.value
+  resource_group_name= azurerm_resource_group.account.name
+  location= azurerm_resource_group.account.location
+  account_tier= each.value.account_tier
+  account_replication_type= each.value.account_replication_type
   }
