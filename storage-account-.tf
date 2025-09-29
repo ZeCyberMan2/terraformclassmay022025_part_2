@@ -1,5 +1,5 @@
 variable "storage"{
-  type= map
+  type= map(string)
   default= {
     "storage1" = "storage1"
     "storage2" = "storage2"
