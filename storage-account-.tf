@@ -36,8 +36,8 @@ resource "azurerm_storage_account" "storage-account" {
 resource "azurerm_storage_account" "storages" {
   for_each= local.storage_accounts
   name= each.value
-  account_tier= storage-account.account_tier
-  account_replication_type= storage-account.account_replication_type
+  account_tier= "Standard"
+  account_replication_type= "GRS"
   resource_group_name= azurerm_resource_group.account.name
   location= azurerm_resource_group.account.location
   }
