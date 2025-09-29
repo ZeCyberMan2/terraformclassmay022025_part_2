@@ -32,8 +32,8 @@ variable "storage_settings"{
 resource "azurerm_storage_account" "storages" {
   for_each= local.storage_accounts
   name= each.value
-  account_tier= var.storage_setting.account_tier
-  account_replication_type= var.storage_setting.account_replication_type
+  account_tier= var.storage_settings.account_tier
+  account_replication_type= var.storage_settings.account_replication_type
   resource_group_name= azurerm_resource_group.account.name
   location= azurerm_resource_group.account.location
   }
