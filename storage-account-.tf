@@ -20,15 +20,11 @@ resource "azurerm_resource_group" "account" {
   location = "Canada Central"
 }
 
-resource "azurerm_storage_account" "storage-account" {
-  name                     = "storageaccount"
-  resource_group_name      = azurerm_resource_group.account.name
-  location                 = azurerm_resource_group.account.location
-  account_tier             = "Standard"
-  account_replication_type = "GRS"
-
-  tags = {
-    environment = "staging"
+variable "storage_settings"{
+  default = {
+    account_tier= "Standard"
+    account_replication_type="GRS"
+    environment="staging"
   }
 }
 
@@ -36,8 +32,8 @@ resource "azurerm_storage_account" "storage-account" {
 resource "azurerm_storage_account" "storages" {
   for_each= local.storage_accounts
   name= each.value
-  account_tier= "Standard"
-  account_replication_type= "GRS"
+  account_tier= var.storage_setting.account_tier
+  account_replication_type= var.storage_setting.account_replication_type
   resource_group_name= azurerm_resource_group.account.name
   location= azurerm_resource_group.account.location
   }
