@@ -9,6 +9,13 @@ variable "storage"{
   }
 }
 
+variable "resourcename"{
+  type= string
+  default="account-resources"
+}
+
+
+
 locals {
   storage_accounts=var.storage
 }
@@ -16,7 +23,7 @@ locals {
 
 
 resource "azurerm_resource_group" "account" {
-  name     = "account-resources"
+  name     = var.resourcename
   location = "Canada Central"
 }
 
@@ -37,3 +44,8 @@ resource "azurerm_storage_account" "storages" {
   resource_group_name= azurerm_resource_group.account.name
   location= azurerm_resource_group.account.location
   }
+
+
+
+
+
