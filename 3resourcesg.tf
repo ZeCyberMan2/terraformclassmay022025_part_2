@@ -1,5 +1,5 @@
 variable "resourcesg" {
-  type=string
+  type=list(string)
   default = ["test", "dev", "prod"]
 }
 
