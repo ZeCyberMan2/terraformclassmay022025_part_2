@@ -1,6 +1,6 @@
 variable "resourcesg" {
+  type=map(string)
   default = ["test", "dev", "prod",]
- 
 }
 
 
