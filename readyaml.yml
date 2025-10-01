@@ -1,0 +1,16 @@
+linuxapp:
+  - name: firstlinuxapp
+    resource_group: azureresourcegroup
+    location: "West Europe"            
+    os_type: Linux
+    sku_name: P1v2
+  - name: secondlinuxapp
+    resource_group: azureresourcegroupmcit
+    location: "Canada Central"            
+    os_type: Linux
+    sku_name: P1v2
+  - name: thirdlinuxapp
+    resource_group: azurerrm
+    location: "Canada Central"            
+    os_type: Linux
+    sku_name: P1v2
