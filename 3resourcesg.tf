@@ -1,6 +1,10 @@
 variable "resourcesg" {
-  type=list(string)
-  default = ["test", "dev", "prod"]
+  type=map(string)
+  default ={
+    test = "test"
+    dev = "dev"
+    prod = "prod"
+  }
 }
 
 
