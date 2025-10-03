@@ -4,13 +4,12 @@ required_providers{
       source="hashicorp/azurerm"
       version= ">=3.70.0"#this version is for azurerm, NOT terraform version
     }
-  }
-  required_version=">=1.4.0"#this version is for Terraform Version, NOT azurerm
-    random = {
+  random = {
          source  = "hashicorp/random"
          version = ">= 3.6.0"
        }
- }
+}
+  required_version=">=1.4.0"#this version is for Terraform Version, NOT azurerm
 }
 
 provider "azurerm"{
