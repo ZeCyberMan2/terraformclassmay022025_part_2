@@ -9,7 +9,7 @@ terraform {
              version = ">= 3.6.0"
            }
 
-  required_version=">=1.4.0"#this version is for Terraform Version, NOT azurerm
+        required_version=">=1.4.0"#this version is for Terraform Version, NOT azurerm
 }
 
 provider "azurerm"{
