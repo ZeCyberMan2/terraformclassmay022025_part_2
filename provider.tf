@@ -54,7 +54,7 @@ locals {
 # Resource Group
 # --------------------------
 resource "azurerm_resource_group" "api_groups" {
- name     = local.api_groups
+ name     = local.rg_name
  location = var.location
 }
 # --------------------------
