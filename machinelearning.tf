@@ -6,10 +6,7 @@ variable "collegeprefix" {
  type    = string
  default = "montrealitcollege"
 }
-variable "tenant_id" {
- type        = string
- description = "AAD tenant ID (required for Key Vault access policy)"
-}
+
 resource "random_string" "mcitprefix_random" {
  length  = 6
  upper   = false
