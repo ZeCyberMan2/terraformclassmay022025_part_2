@@ -7,8 +7,9 @@ variable "client_id"{
 variable "client_secret"{
   type=string
 }
-variable "tenant_id"{
-  type=string
+variable "tenant_id" {
+ type        = string
+ description = "AAD tenant ID (required for Key Vault access policy)"
 }
 variable "firstname"{
   type=string
