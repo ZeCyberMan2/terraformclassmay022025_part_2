@@ -46,7 +46,7 @@ resource "azurerm_container_registry" "mcitprefix_acr" {
  admin_enabled       = true
 }
 resource "azurerm_machine_learning_workspace" "mcitprefix_ws" {
- name                = "${var.prefix}-ws"
+ name                = "${var.collegeprefix}-ws"
  location            = azurerm_resource_group.mcitprefix_rg.location
  resource_group_name = azurerm_resource_group.mcitprefix_rg.name
  storage_account_id      = azurerm_storage_account.mcitprefix_sa.id
@@ -69,7 +69,7 @@ resource "azurerm_machine_learning_compute_cluster" "mcitprefix_cpu" {
  name                = "${var.collegeprefix}-cpu"
  location            = azurerm_resource_group.mcitprefix_rg.location
  resource_group_name = azurerm_resource_group.mcitprefix_rg.name
- workspace_name      = azurerm_machine_learning_workspace.mcitprefix_ws.name
+ workspace_name      = azurerm_machine_learning_workspace.mcitprefix_ws.id
  vm_size = "STANDARD_DS3_V2"
  scale_settings {
    min_node_count = 0
