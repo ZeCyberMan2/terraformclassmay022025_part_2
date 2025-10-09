@@ -7,6 +7,22 @@ variable "collegeprefix" {
  default = "montrealitcollege"
 }
 
+
+variable "machinelearning" {
+  type = map(string)
+  default = {
+    "machinelearning 1" = "machinelearning 1"
+    "machinelearning 2" = "machinelearning 2"
+    "machinelearning 3" = "machinelearning 3"
+    "machinelearning 4" = "machinelearning 4"
+    "machinelearning 5" = "machinelearning 5"
+  }
+}
+
+locals {
+  allmachineslearning = var.machinelearning
+}
+
 resource "random_string" "mcitprefix_random" {
  length  = 6
  upper   = false
@@ -66,6 +82,7 @@ resource "azurerm_key_vault_access_policy" "mcitprefix_kv_policy" {
  certificate_permissions = ["Get", "List"]
 }
 resource "azurerm_machine_learning_compute_cluster" "mcitprefix_cpu" {
+ for_each = local.allmachineslearning
  name                = "${var.collegeprefix}-cpu"
  location            = azurerm_resource_group.mcitprefix_rg.location
  machine_learning_workspace_id = azurerm_machine_learning_workspace.mcitprefix_ws.id
